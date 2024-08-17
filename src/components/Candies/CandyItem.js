@@ -5,7 +5,7 @@ import Button from '../UI/Button'
 const CandyItem = (props) => {
   return (
     <li className={classes.list} >
-        <div className={candyInfo} >
+        <div className={classes.candyInfo} >
             <p>{props.name}</p>
             <p>{props.description}</p>
             <p>{props.price}</p>

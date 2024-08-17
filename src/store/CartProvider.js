@@ -1,15 +1,41 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import { CartContext } from './context-store'
 
 const defaultCart = {
     items: [],
-    totalAmount: 0
+    totalAmount: 0,
+    isCartShown: false
 }
 
-const CartProvider = () => {
+const cartReducer = ((state, action) => {
+    if (action.type === 'TOGGLE_CART') {
+        return {
+            items: [...state.items],
+            totalAmount: state.totalAmount,
+            isCartShown: true
+        }
+    }
+    return defaultCart
+})
+
+const CartProvider = (props) => {
+
+    const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCart)
+
+    const toggleCartHandler = () =>{
+        console.log('called')
+            dispatchCartAction({type:'TOGGLE_CART'})
+    }
+
+    const cartContext = {
+        items: cartState.items,
+        totalAmount: cartState.totalAmount,
+        isCartShown: cartState.isCartShown,
+        toggleCart: toggleCartHandler
+    }
 
     return (
-        <div>CartProvider</div>
+        <CartContext.Provider value={cartContext} >{props.children}</CartContext.Provider>
     )
 }
 

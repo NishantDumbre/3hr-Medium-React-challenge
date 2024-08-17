@@ -21,7 +21,6 @@ const CandyProvider = (props) => {
     else{
       setAllCandies([...allCandies, candy])
     }
-    console.log(allCandies)
   }
 
   const candyContext = {

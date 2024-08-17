@@ -1,9 +1,9 @@
 import React from 'react'
 import Modal from '../UI/Modal'
 
-const Cart = () => {
+const Cart = (props) => {
   return (
-    <Modal>
+    <Modal onClick={props.onClick}>
         <p>This is loading</p>
     </Modal>
   )

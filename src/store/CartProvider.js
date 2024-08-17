@@ -12,7 +12,7 @@ const cartReducer = ((state, action) => {
         return {
             items: [...state.items],
             totalAmount: state.totalAmount,
-            isCartShown: true
+            isCartShown: !state.isCartShown
         }
     }
     return defaultCart
@@ -23,7 +23,6 @@ const CartProvider = (props) => {
     const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCart)
 
     const toggleCartHandler = () =>{
-        console.log('called')
             dispatchCartAction({type:'TOGGLE_CART'})
     }
 

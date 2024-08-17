@@ -2,13 +2,12 @@ import React, { useContext } from 'react'
 import classes from './HeaderCartButton.module.css'
 import { CartContext } from '../../store/context-store'
 
-const HeaderCartButton = () => {
+const HeaderCartButton = (props) => {
 
-  const cartCtx = useContext(CartContext)
 
   const showCartHandler = () =>{
     console.log(true)
-    cartCtx.toggleCart()
+    props.onShow()
   }
 
   return (

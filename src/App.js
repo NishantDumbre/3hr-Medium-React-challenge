@@ -11,11 +11,15 @@ function App() {
 
   const [cartShown, isCartShown] = useState(false)
 
+  const showCartHandler = () =>{
+    isCartShown((prevState)=> !prevState)
+  }
+
   return (
     <CartProvider>
       <CandyProvider>
-        {cartShown && <Cart />}
-        <Header />
+        {cartShown && <Cart onClick={showCartHandler} />}
+        <Header onShow={showCartHandler} />
         <CandyForm />
         <AvailableCandies />
       </CandyProvider>

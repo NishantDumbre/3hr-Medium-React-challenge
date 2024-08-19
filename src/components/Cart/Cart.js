@@ -17,10 +17,11 @@ const Cart = (props) => {
     return <CartItems name={item.name} key={item.id} quantity={item.quantity} description={item.description} onRemove={() => removeCartItem(item)} />
   })
 
+  
 
   return (
     <Modal onClick={props.onClick}>
-       <ul className={classes.listContainer}>{allCartItems}</ul>
+      <ul className={classes.listContainer}>{allCartItems}</ul>
       <div className={classes.bottom} >
         <div className={classes.totalAmount} >Total Amount: ${cartCtx.totalAmount}</div>
         <div className={classes.actionsContainer} >

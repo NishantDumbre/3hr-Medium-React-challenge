@@ -1,6 +1,8 @@
 import React, { useEffect, useContext } from 'react'
 import CandyItem from './CandyItem'
+import Card from '../UI/Card'
 import { CandyContext } from '../../store/context-store'
+import classes from './AvailableCandies.module.css'
 
 const AvailableCandies = () => {
 
@@ -13,7 +15,9 @@ const AvailableCandies = () => {
   })
 
   return (
-    <ul>{candies}</ul>
+    <Card className={classes.store}>
+      <ul>{candies}</ul>
+    </Card>
   )
 }
 

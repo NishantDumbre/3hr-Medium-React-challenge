@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import classes from './Modal.module.css'
+import Card from './Card'
 
 
 const Backdrop = (props) => {
@@ -11,7 +12,9 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
     return (
-        <div className={classes.modal} >{props.children}</div>
+        <Card className={classes.modal} >
+            {props.children}
+        </Card>
     )
 }
 

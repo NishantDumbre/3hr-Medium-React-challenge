@@ -1,0 +1,27 @@
+.listContainer{
+    list-style: none;
+    overflow-y: scroll;
+    height: 65%;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.actionsContainer{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+
+.totalAmount{
+    font-size: 25px;
+    margin-bottom: 10px;
+}

@@ -8,6 +8,7 @@ const CandyProvider = (props) => {
   const [allCandies, setAllCandies] = useState([{ id: 1, name: 'Dairy Milk', description: 'Cadbury', price: '10' }])
   const [isPresent, setIsPresent] = useState(false)
 
+
   const addCandyHandler = (candy) =>{
     const existingCandy = allCandies.filter((item) =>{
       return candy.name === item.name

@@ -1,0 +1,8 @@
+.store{
+    margin: auto;
+    margin-top: 2%;
+    width:80%;
+    padding: 2%;
+    background-color: rgba(153, 178, 221, 0.15);
+    overflow-y:auto
+}

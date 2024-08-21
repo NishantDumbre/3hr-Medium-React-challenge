@@ -23,7 +23,7 @@ const CandyForm = () => {
         <Card className={classes.form} >
             <form onSubmit={addCandyHandler} >
                 <Input label='Name' input={{ id: 'name', type: 'text', maxLength: '20', required:true }} ref={nameRef} />
-                <Input label='Description' input={{ id: 'description', type: 'text', maxLength: '0', required:true }} ref={descRef} />
+                <Input label='Description' input={{ id: 'description', type: 'text', maxLength: '20', required:true }} ref={descRef} />
                 <Input label='Price' input={{ id: 'price', type: 'text', maxLength: '4', required:true }} ref={priceRef} />
                 <Button type='submit' name='Add'/>
             </form>
